@@ -20,3 +20,4 @@ def test_subtract_negative_result():
 # def test_failing_example():
 #     assert math_operations.add(1, 1) == 3  # Dieser Test würde fehlschlagen
 # Ein weiterer Testkommentar
+# Kleine Änderung für 2. Push
