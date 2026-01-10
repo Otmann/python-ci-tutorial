@@ -27,5 +27,13 @@ jobs:
         run: python -m py_compile math_operations.py test_math_operations.py
 
       # 5. Tests ausführen (wie dein zweiter Hook-Check)
-      - name: 🧪 Tests mit pytest ausführen
-        run: pytest test_math_operations.py --tb=short -q
+     # - name: 🧪 Tests mit pytest ausführen
+      #  run: pytest test_math_operations.py --tb=short -q
+      - name: 🧪 Tests mit HTML-Report ausführen
+        run: pytest test_math_operations.py --html=report.html --self-contained-html
+      - name: 📤 HTML-Report als Artefakt speichern
+        if: always()  # ↑ Läd Report auch hoch, wenn Tests fehlschlagen
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-html-report
+          path: report.html
