@@ -19,7 +19,8 @@ jobs:
 
       # 3. Abhängigkeiten installieren (hier nur pytest)
       - name: 📦 Abhängigkeiten installieren
-        run: pip install pytest
+        #run: pip install pytest
+        run: pip install -r requirements.txt
 
       # 4. Syntax-Check (wie dein erster Hook-Check)
       - name: 🔍 Python-Syntax prüfen
