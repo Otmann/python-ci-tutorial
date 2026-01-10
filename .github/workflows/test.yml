@@ -1,0 +1,30 @@
+name: Python CI Pipeline
+
+on: [push]  # Läuft automatisch bei jedem Push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Läuft auf einem frischen Ubuntu-Server von GitHub
+
+    steps:
+      # 1. Code auschecken
+      - name: 📥 Code auschecken
+        uses: actions/checkout@v4
+
+      # 2. Python einrichten
+      - name: 🐍 Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # Wähle deine Version
+
+      # 3. Abhängigkeiten installieren (hier nur pytest)
+      - name: 📦 Abhängigkeiten installieren
+        run: pip install pytest
+
+      # 4. Syntax-Check (wie dein erster Hook-Check)
+      - name: 🔍 Python-Syntax prüfen
+        run: python -m py_compile math_operations.py test_math_operations.py
+
+      # 5. Tests ausführen (wie dein zweiter Hook-Check)
+      - name: 🧪 Tests mit pytest ausführen
+        run: pytest test_math_operations.py --tb=short -q
