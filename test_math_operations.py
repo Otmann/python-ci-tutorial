@@ -2,7 +2,7 @@ import math_operations
 
 def test_add_positive_numbers():
     """Testet die Addition positiver Zahlen."""
-    assert math_operations.add(5, 3) == 9
+    assert math_operations.add(5, 3) == 8
 
 def test_add_negative_numbers():
     """Testet die Addition negativer Zahlen."""
