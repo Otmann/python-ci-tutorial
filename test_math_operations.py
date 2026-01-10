@@ -2,7 +2,7 @@ import math_operations
 
 def test_add_positive_numbers():
     """Testet die Addition positiver Zahlen."""
-    assert math_operations.add(5, 3) == 8
+    assert math_operations.add(5, 3) == 9
 
 def test_add_negative_numbers():
     """Testet die Addition negativer Zahlen."""
@@ -15,6 +15,7 @@ def test_subtract():
 def test_subtract_negative_result():
     """Testet Subtraktion mit negativem Ergebnis."""
     assert math_operations.subtract(1, 5) == -4
+
 
 # Ein absichtlich fehlschlagender Test zum Demonstrieren
 # def test_failing_example():
