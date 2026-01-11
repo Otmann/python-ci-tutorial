@@ -1,4 +1,5 @@
 import math_operations
+import pytest
 
 def test_add_positive_numbers():
     """Testet die Addition positiver Zahlen."""
@@ -20,6 +21,14 @@ def test_multiply():
     assert math_operations.multiply(3,4) == 12
     assert math_operations.multiply(-2,5) == -10
     assert math_operations.multiply(0,9) == 0
+
+
+
+def test_divide():
+    """Testet Division."""
+    assert math_operations.divide(10, 2) == 5
+    with pytest.raises(ValueError):
+         math_operations.divide(5,0)
 
 # Ein absichtlich fehlschlagender Test zum Demonstrieren
 # def test_failing_example():
