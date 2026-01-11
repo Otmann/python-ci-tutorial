@@ -16,6 +16,10 @@ def test_subtract_negative_result():
     """Testet Subtraktion mit negativem Ergebnis."""
     assert math_operations.subtract(1, 5) == -4
 
+def test_multiply():
+    assert multiply(3,4) == 12
+    assert multiply(-2,5) == -10
+    assert multiply(0,9) == 0
 
 # Ein absichtlich fehlschlagender Test zum Demonstrieren
 # def test_failing_example():
