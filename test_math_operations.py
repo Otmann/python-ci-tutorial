@@ -19,7 +19,7 @@ def test_subtract_negative_result():
 def test_multiply():
     assert math_operations.multiply(3,4) == 12
     assert math_operations.multiply(-2,5) == -10
-    assert math.operations.multiply(0,9) == 0
+    assert math_operations.multiply(0,9) == 0
 
 # Ein absichtlich fehlschlagender Test zum Demonstrieren
 # def test_failing_example():
