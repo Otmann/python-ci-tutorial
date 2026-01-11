@@ -27,7 +27,7 @@ def test_multiply():
 def test_divide():
     """Testet Division."""
     assert math_operations.divide(10, 2) == 5
-    with math_operations.pytest.raises(ValueError):
+    with pytest.raises(ValueError):
          math_operations.divide(5,0)
 
 # Ein absichtlich fehlschlagender Test zum Demonstrieren
