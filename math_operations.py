@@ -6,8 +6,8 @@ def subtract(a, b):
     """Subtrahiert zwei Zahlen."""
     return a - b
 
-def multiply(a,b):
-    return a*b
+def multiply(a, b):
+    return a * b
 
 
 # Neuer Kommentar, um Workflow auszulösen
